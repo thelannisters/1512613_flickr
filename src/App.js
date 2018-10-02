@@ -23,7 +23,12 @@ class App extends Component {
       let picArray  = response.data.photos.photo.map((pic)=>{
         let srcPath = 'https://farm'+pic.farm+'.staticflickr.com/'+pic.server+'/'+pic.id+'_'+pic.secret+'.jpg';
         return (
-          <img alt="" src={srcPath}></img>
+        <div class="hvrbox">
+          <img alt="" src={srcPath} class="hvrbox-layer_bottom"></img>
+          <div class="hvrbox-layer_top hvrbox-layer_slideright">
+				    <div class="hvrbox-text">Title:  {pic.title} ||| Owner: {pic.owner}  </div>
+			    </div>
+      </div>
         )
       
     })
@@ -40,6 +45,7 @@ class App extends Component {
         </header>
         <p className="App-intro">
          {this.state.item}
+         
         </p>
       </div>
     );
