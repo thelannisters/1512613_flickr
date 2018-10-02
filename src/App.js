@@ -10,8 +10,8 @@ class App extends Component {
     super(props);
     this.state={
       hasMore: true,
-      isLoading: false,
       item: [],
+      isLoading: false,
       cursor: 1
     }
   }
